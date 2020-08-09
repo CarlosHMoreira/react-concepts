@@ -14,7 +14,7 @@ const Header = ({ onMenuIconClick }) => (
         <MenuIcon />
       </IconButton>
       <Typography component="h1" variant="h4">
-        React Concepts
+        React - Principais conceitos
       </Typography>
     </Toolbar>
   </AppBar>
