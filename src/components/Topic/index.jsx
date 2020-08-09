@@ -1,12 +1,19 @@
 import React from 'react';
-import { Paper, Box, Divider, Typography, makeStyles } from '@material-ui/core';
+import {
+  Paper,
+  Grid,
+  Box,
+  Divider,
+  Typography,
+  makeStyles,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: `${theme.spacing(1)}`,
   },
   box: {
-    margin: `${theme.spacing(1)}`,
+    margin: `${theme.spacing(2)} 0`,
   },
 }));
 
@@ -19,7 +26,9 @@ const Topic = ({ title, children }) => {
         {title}
       </Typography>
       <Divider />
-      <Box className={box}>{children}</Box>
+      <Grid className={box}>
+        <Box>{children}</Box>
+      </Grid>
     </Paper>
   );
 };
