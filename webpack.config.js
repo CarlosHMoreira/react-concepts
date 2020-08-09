@@ -16,16 +16,10 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.s(a|c)ss/,
+        test: /\.css/,
         loader: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment,
-            },
-          },
         ],
       },
     ],
