@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Header from '../Header';
-import Menu from '../Menu';
+import { Header, Menu, MenuListItem, Content, Topic } from '../index';
+import { ConditionalRenderExample } from '../../examples';
+
+const data = [
+  {
+    title: 'Renderização Condicional',
+    id: 'renderizacao-condicional',
+    component: ConditionalRenderExample,
+  },
+];
 
 const App = () => {
   const [state, setState] = useState({
@@ -22,10 +30,21 @@ const App = () => {
   return (
     <>
       <CssBaseline />
+
       <Header onMenuIconClick={toggleDrawer(!state.menuIsOpen)} />
       <Menu isOpened={state.menuIsOpen} onClose={toggleDrawer(false)}>
-        <p>Some Random Content</p>
+        {data.map(({ title, id }) => (
+          <MenuListItem key={id} text={title} to={`#${id}`} />
+        ))}
       </Menu>
+
+      <Content>
+        {data.map(({ title, id, component }) => (
+          <Topic key={id} id={id} title={title}>
+            {component}
+          </Topic>
+        ))}
+      </Content>
     </>
   );
 };
