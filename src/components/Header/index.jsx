@@ -2,13 +2,20 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const Header = () => (
+const Header = ({ onMenuIconClick }) => (
   <AppBar position="static">
     <Toolbar>
-      <IconButton edge="start" color="inherit" aria-label="menu">
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        onClick={onMenuIconClick}
+      >
         <MenuIcon />
       </IconButton>
-      <Typography component="h1" variant="h4"></Typography>
+      <Typography component="h1" variant="h4">
+        React Concepts
+      </Typography>
     </Toolbar>
   </AppBar>
 );
