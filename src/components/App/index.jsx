@@ -1,5 +1,15 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-const App = () => <h1>Test React!</h1>;
+import Header from '../Header';
 
-export default App; 
+const App = () => {
+  return (
+    <>
+      <CssBaseline />
+      <Header />
+    </>
+  );
+};
+
+export default App;
