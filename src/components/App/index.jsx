@@ -2,26 +2,14 @@ import React, { useRef, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Header, Menu, MenuListItem, Content, Topic } from '../index';
-import {
-  ConditionalRenderExample,
-  ControlledAndUncontrolledComponentExample,
-} from '../../examples';
-
-const data = [
-  {
-    title: 'Renderização Condicional',
-    id: 'renderizacao-condicional',
-    component: ConditionalRenderExample,
-  },
-  {
-    title: 'Componente controlado e não controlado',
-    id: 'componente-controlado-nao-controlado',
-    component: ControlledAndUncontrolledComponentExample,
-  },
-];
+import dataSource from './data-source';
 
 const App = () => {
-  const dataWithRef = data.map((item) => ({ ...item, itemRef: useRef() }));
+  const dataWithRef = dataSource.map((item) => ({
+    ...item,
+    itemRef: useRef(),
+  }));
+
   const [state, setState] = useState({
     menuIsOpen: false,
   });

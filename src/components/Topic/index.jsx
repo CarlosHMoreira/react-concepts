@@ -11,6 +11,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: `${theme.spacing(1)}`,
+    margin: `${theme.spacing(2)} 0`,
   },
   box: {
     margin: `${theme.spacing(2)} 0`,
