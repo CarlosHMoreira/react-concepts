@@ -2,7 +2,7 @@
 
 O projeto react-concepts é um conjunto de exemplos (maior parte usando hooks) de conceitos básicos do React.
 
-[Preview](https://kmoreira.github.io/react-concepts/)
+[Preview](https://kmoreira.github.io/react-concepts/) 🌍
 
 ## Instalação
 
