@@ -2,13 +2,21 @@ import React, { useRef, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Header, Menu, MenuListItem, Content, Topic } from '../index';
-import { ConditionalRenderExample } from '../../examples';
+import {
+  ConditionalRenderExample,
+  ControlledAndUncontrolledComponentExample,
+} from '../../examples';
 
 const data = [
   {
     title: 'Renderização Condicional',
     id: 'renderizacao-condicional',
     component: ConditionalRenderExample,
+  },
+  {
+    title: 'Componente controlado e não controlado',
+    id: 'componente-controlado-nao-controlado',
+    component: ControlledAndUncontrolledComponentExample,
   },
 ];
 
