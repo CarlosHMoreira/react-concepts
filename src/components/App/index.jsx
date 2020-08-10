@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Header, Menu, MenuListItem, Content, Topic } from '../index';
@@ -13,6 +13,7 @@ const data = [
 ];
 
 const App = () => {
+  const dataWithRef = data.map((item) => ({ ...item, itemRef: useRef() }));
   const [state, setState] = useState({
     menuIsOpen: false,
   });
@@ -27,20 +28,22 @@ const App = () => {
     setState({ ...state, menuIsOpen: shouldOpen });
   };
 
+  const scrollToRef = (ref) => () => window.scrollTo(0, ref.current.offsetTop);
+
   return (
     <>
       <CssBaseline />
 
       <Header onMenuIconClick={toggleDrawer(!state.menuIsOpen)} />
       <Menu isOpened={state.menuIsOpen} onClose={toggleDrawer(false)}>
-        {data.map(({ title, id }) => (
-          <MenuListItem key={id} text={title} to={`#${id}`} />
+        {dataWithRef.map(({ title, id, itemRef }) => (
+          <MenuListItem key={id} text={title} onClick={scrollToRef(itemRef)} />
         ))}
       </Menu>
 
       <Content>
-        {data.map(({ title, id, component }) => (
-          <Topic key={id} id={id} title={title}>
+        {dataWithRef.map(({ title, id, itemRef, component }) => (
+          <Topic key={id} id={id} title={title} ref={itemRef}>
             {component}
           </Topic>
         ))}

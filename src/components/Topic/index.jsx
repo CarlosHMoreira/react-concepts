@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
   Paper,
   Grid,
@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Topic = ({ title, children }) => {
+const Topic = forwardRef(({ title, children }, ref) => {
   const { paper, box } = useStyles();
 
   return (
-    <Paper className={paper} variant="outlined">
+    <Paper className={paper} variant="outlined" ref={ref}>
       <Typography component="h1" variant="h4">
         {title}
       </Typography>
@@ -31,6 +31,6 @@ const Topic = ({ title, children }) => {
       </Grid>
     </Paper>
   );
-};
+});
 
 export default Topic;
