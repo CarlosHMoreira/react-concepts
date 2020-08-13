@@ -4,8 +4,8 @@ import { Divider, Typography } from '@material-ui/core';
 import { CodeBlock } from '../../components';
 
 const NotControlledForm = () => {
-  const inputName = useRef('');
-  const inputLastName = useRef('');
+  const inputName = useRef(null);
+  const inputLastName = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
