@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Header, Menu, MenuListItem, Content, Topic } from '../index';
+import './styles.css';
 import dataSource from './data-source';
+
+const HEADER_GUTTER = 70;
 
 const App = () => {
   const dataWithRef = dataSource.map((item) => ({
@@ -24,7 +27,8 @@ const App = () => {
     setState({ ...state, menuIsOpen: shouldOpen });
   };
 
-  const scrollToRef = (ref) => () => window.scrollTo(0, ref.current.offsetTop);
+  const scrollToRef = (ref) => () =>
+    window.scrollTo(0, ref.current.offsetTop - HEADER_GUTTER);
 
   return (
     <>
