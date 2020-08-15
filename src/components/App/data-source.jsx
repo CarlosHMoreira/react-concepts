@@ -2,6 +2,7 @@ import {
   ConditionalRenderExample,
   ControlledAndUncontrolledComponentExample,
   DynamicImportExample,
+  ReactLazyExample,
 } from '../../examples';
 
 export default [
@@ -19,5 +20,10 @@ export default [
     title: 'Code Splitting com import()',
     id: 'conde-splitting-com-import',
     component: DynamicImportExample,
+  },
+  {
+    title: 'Carregando componentes assincronamente',
+    id: 'react-lazy',
+    component: ReactLazyExample,
   },
 ];
