@@ -2,7 +2,7 @@ import React from 'react';
 import { Paper, Typography, Divider } from '@material-ui/core';
 
 import { CodeBlock } from '../../components';
-const GreenLightMessage = () => <p> Siga! </p>;
+const GreenLightMessage = () => <p style={{ color: 'limegreen' }}> Siga! </p>;
 
 const TrafficLight = ({ isGreenLight }) => (
   <div>
@@ -13,7 +13,7 @@ const TrafficLight = ({ isGreenLight }) => (
   </div>
 );
 
-const componentsDefinition = `const GreenLightMessage = () => <p> Siga! </p>;
+const componentsDefinition = `const GreenLightMessage = () => <p style={{ color: 'limegreen' }}> Siga! </p>;
 
 const TrafficLight = ({ isGreenLight }) => (
 <div>
