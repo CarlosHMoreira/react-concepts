@@ -55,7 +55,7 @@ const DynamicImportExample = () => (
     <br />
 
     <Divider />
-    <Typography>Exemplo usando função componente Suspense</Typography>
+    <Typography>Exemplo usando componente Suspense</Typography>
     <CodeBlock language="js" code={usingSuspense}></CodeBlock>
     <Divider />
   </>
