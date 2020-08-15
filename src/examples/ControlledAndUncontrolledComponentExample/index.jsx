@@ -145,32 +145,27 @@ const controlledFormTextDefinition = `const ControlledForm = () => {
     );
   };`;
 
-const ControlledAndUncontrolledComponentExample = () => {
-  return (
-    <>
-      <Typography>
-        A principal diferença entre um componente controlado e um não controlado
-        é que o controlado você usa o <code>state</code> do componente pra
-        gerenciar e <em>controlar</em> os dados, geralmente de um formulário. Já
-        o componente não-controlado utiliza-se do próprio mecanismo de
-        armazenamento de dados dos elementos do DOM, como o <code>value</code>
-        &nbsp; de um elemento <code>input</code> por exemplo.
-      </Typography>
+const ControlledAndUncontrolledComponentExample = () => (
+  <>
+    <Typography>
+      A principal diferença entre um componente controlado e um não controlado é
+      que o controlado você usa o <code>state</code> do componente pra gerenciar
+      e <em>controlar</em> os dados, geralmente de um formulário. Já o
+      componente não-controlado utiliza-se do próprio mecanismo de armazenamento
+      de dados dos elementos do DOM, como o <code>value</code>
+      &nbsp; de um elemento <code>input</code> por exemplo.
+    </Typography>
 
-      <Divider />
-      <Typography>Exemplo de componente controlado.</Typography>
-      <CodeBlock language="js" code={controlledFormTextDefinition}></CodeBlock>
-      <ControlledForm />
+    <Divider />
+    <Typography>Exemplo de componente controlado.</Typography>
+    <CodeBlock language="js" code={controlledFormTextDefinition}></CodeBlock>
+    <ControlledForm />
 
-      <Divider />
-      <Typography>Exemplo de componente não-controlado.</Typography>
-      <CodeBlock
-        language="js"
-        code={notControlledFormTextDefinition}
-      ></CodeBlock>
-      <NotControlledForm />
-    </>
-  );
-};
+    <Divider />
+    <Typography>Exemplo de componente não-controlado.</Typography>
+    <CodeBlock language="js" code={notControlledFormTextDefinition}></CodeBlock>
+    <NotControlledForm />
+  </>
+);
 
 export default ControlledAndUncontrolledComponentExample;
