@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/KMoreira/react-concepts"
   },
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --open --port 3000 --compress --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
